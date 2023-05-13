@@ -1,9 +1,13 @@
 package server
 
 import io.grpc.netty.NettyServerBuilder
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import service.FindNewFriendService
 
-class HelloWorldServer(private val port: Int) {
+class NewFriendServer(private val port: Int) {
     private val server: io.grpc.Server = NettyServerBuilder
         .forPort(port)
         .addService(FindNewFriendService())

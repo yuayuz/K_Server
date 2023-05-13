@@ -35,10 +35,20 @@ mkdir $kotlin_out_root/grpc_code_gen
 $protoc_path \
 --plugin=protoc-gen-grpc-java=$grpc_java_plugin_path \
 --plugin=protoc-gen-grpc-kotlin=$grpc_kotlin_plugin_path \
---proto_path=$in_root \
+--proto_path=$in_root/friend \
 --java_out=$java_out_root \
 --grpc-java_out=$java_out_root \
 --kotlin_out=$kotlin_out_root \
 --grpc-kotlin_out=$kotlin_out_root \
-$in_root/*.proto
+$in_root/friend/*.proto \
+&&
+$protoc_path \
+--plugin=protoc-gen-grpc-java=$grpc_java_plugin_path \
+--plugin=protoc-gen-grpc-kotlin=$grpc_kotlin_plugin_path \
+--proto_path=$in_root/chat \
+--java_out=$java_out_root \
+--grpc-java_out=$java_out_root \
+--kotlin_out=$kotlin_out_root \
+--grpc-kotlin_out=$kotlin_out_root \
+$in_root/chat/*.proto
 

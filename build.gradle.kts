@@ -24,6 +24,9 @@ dependencies {
     implementation("io.grpc:grpc-okhttp:1.54.0")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+
+    // https://mvnrepository.com/artifact/org.ktorm/ktorm-core
+    implementation("org.ktorm:ktorm-core:3.6.0")
 }
 
 tasks.test {
