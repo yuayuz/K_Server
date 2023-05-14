@@ -27,6 +27,8 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.ktorm/ktorm-core
     implementation("org.ktorm:ktorm-core:3.6.0")
+
+    implementation ("org.postgresql:postgresql:42.3.1")
 }
 
 tasks.test {
