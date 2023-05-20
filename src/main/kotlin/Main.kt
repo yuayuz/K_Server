@@ -12,16 +12,16 @@ suspend fun main(args: Array<String>) {
 
 
     val port = 8980
-    val newFriendServer = NewFriendServer(port)
+    /*val newFriendServer = NewFriendServer(port)
     newFriendServer.start()
-    newFriendServer.blockUntilShutdown()
+    newFriendServer.blockUntilShutdown()*/
 
 //    d()
 //    println(frienddata.data.userName)
 
 
-//    val messageServer = messageserver(port)
-//    messageServer.start()
-//    messageServer.blockUntilShutdown()
+    val messageServer = messageserver(port)
+    messageServer.start()
+    messageServer.blockUntilShutdown()
 
 }
